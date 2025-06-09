@@ -14,9 +14,8 @@ public class Namecode {
             System.out.print((int) x);
         }
         System.out.println("");
-
     }
-
+    
     static void code() {
         System.out.println("Enter the code to find the name");
         Scanner sc = new Scanner(System.in);
@@ -33,39 +32,31 @@ public class Namecode {
             int as=Integer.parseInt(char3);
             System.out.print((char)as);
             index=index+2;
-
         }   
-                System.out.println("");
-
-        
-        
+                System.out.println(""); 
     }
 
     public static void main(String[] args) {
         int cont=1;
             while(cont==1){
             Scanner sc = new Scanner(System.in);
-            System.out.println("1.ascii code \n2.code for name");
+            System.out.println("1.code for name \n2.ascii code");
             int ch = sc.nextInt();
-
             switch (ch) {
-                case 1: 
+                case 1:
+                    nametocode();
+                    break;
+                case 2: 
                     code();
                     break;
 
-                case 2:
-                    nametocode();
-                    break;
-                default: {
+                default: 
                     System.out.println("You dumb af bruh \nEnter a valid input");
-                }
+                    break;
 
             }
-
             System.out.println("enter 0 to exit or 1 to continue");
             cont=sc.nextInt();
-
         }
     }
-
 }
